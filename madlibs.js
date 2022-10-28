@@ -26,11 +26,12 @@
  * There are multiple ways to do this, but you may want to use regular expressions.
  * Please go through this lesson: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/
  */
-
+let objarray = [];
 function parseStory(rawStory) {
   // Your code here.
+
   let arrayOfWord = rawStory.split(" ");
-  let objarray = [];
+
   for (let i = 0; i < arrayOfWord.length; i++) {
     if (/\w\[n\]/.test(arrayOfWord[i])) {
       let obj = {};
@@ -56,8 +57,8 @@ function parseStory(rawStory) {
       objarray.push(obj);
     }
   }
-  console.log(objarray);
-  return {}; // This line is currently wrong :)
+
+  return objarray; // This line is currently wrong :)
 }
 
 /**
@@ -70,4 +71,15 @@ getRawStory()
   .then(parseStory)
   .then((processedStory) => {
     console.log(processedStory);
+    const madLibsEdit = document.getElementsByClassName("madLibsEdit");
+    const madLibsPreview = document.getElementsByClassName("madLibsPreview");
+    processedStory.forEach((element) => {
+      if ("pos" in element) {
+      } else {
+        const p = document.createElement("p");
+        p.textContent = element.word;
+        madLibsEdit.append(p); //madLibsEdit.append is not a function
+      }
+    });
   });
+//undefined
