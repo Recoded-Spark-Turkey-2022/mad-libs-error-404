@@ -9,6 +9,6 @@
     color: blue;
  }
  .blank{
-   padding-right: 1cm; 
-   border: 1px solid red;
+   padding-inline: 1em;
+   border: 1px solid rgb(0, 187, 255);
  }
