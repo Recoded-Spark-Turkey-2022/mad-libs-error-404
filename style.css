@@ -3,8 +3,12 @@
  */
  #madLibsEdit{
     color: red;
-    border: 1mm black;
+   
  }
  #madLibsPreview{
     color: blue;
+ }
+ .blank{
+   padding-right: 1cm; 
+   border: 1px solid red;
  }

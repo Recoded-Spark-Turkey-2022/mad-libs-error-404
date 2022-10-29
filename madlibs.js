@@ -57,7 +57,7 @@ function parseStory(rawStory) {
       objarray.push(obj);
     }
   }
-
+// need to edit for showing dots and commas
   return objarray; // This line is currently wrong :)
 }
 
@@ -67,33 +67,55 @@ function parseStory(rawStory) {
  *
  * You'll want to use the results of parseStory() to display the story on the page.
  */
+function editStory(story) {}
+
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
-    console.log(processedStory);
+    //console.log(processedStory);
     const madLibsEdit = document.getElementById("madLibsEdit");
     const madLibsPreview = document.getElementById("madLibsPreview");
-    //console.log(madLibsEdit)
     const edit = document.createElement("p");
     const privew = document.createElement("p");
-
     madLibsEdit.append(edit);
-    madLibsPreview.append(privew)
-
-    processedStory.forEach((element) => {
+    madLibsPreview.append(privew);
+    let inputWord;
+    let copiedWord;
+    const normalWord = document.createElement("span");
+//extracting the words from the array of obj:
+    processedStory.forEach((element, i) => {
       if ("pos" in element) {
-        const span = document.createElement("span");
-        span.textContent = `----(${element.pos}) `;
-        edit.append(span.cloneNode(true));
-        privew.append(span)
+        inputWord = document.createElement("input");
+        inputWord.classList.add("toEdit");
+        inputWord.setAttribute("id", `input${i}`);
+        //inputWord.setAttribute('oninput',detectInput())
+        //console.log(inputWord.id)
+        copiedWord = document.createElement("span");
+        copiedWord.classList.add("blank");
+        copiedWord.setAttribute("id", `copy${i}`);
+        //console.log(copiedWord.id)
+        edit.append(inputWord.cloneNode(true));
+        privew.append(copiedWord.cloneNode(true));
       } else {
-        const span = document.createElement("span");
-        span.textContent = `${element.word} `;
-        edit.append(span.cloneNode(true));
-        privew.append(span)
+        normalWord.textContent = `${element.word} `;
+        edit.append(normalWord.cloneNode(true));
+        privew.append(normalWord.cloneNode(true));
       }
     });
-    
-    
-  });
 
+//connecting the madLibsEdit eith madLibsPreview
+    const allInputs = document.getElementsByClassName("toEdit");
+    for (let i = 0; i < allInputs.length; i++) {//ask about iteration through allInputs
+     // console.log(allInputs[i]);
+
+      allInputs[i].addEventListener("input", detectInput);
+      function detectInput() {
+        console.log("there is input");
+        const allCopied = document.getElementsByClassName("blank");
+
+        const myInputText = allInputs[i].value;
+        allCopied[i].textContent = myInputText;
+        return;
+      }
+    }
+  });
