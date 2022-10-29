@@ -57,7 +57,7 @@ function parseStory(rawStory) {
       objarray.push(obj);
     }
   }
-// need to edit for showing dots and commas
+  // need to edit for showing dots and commas
   return objarray; // This line is currently wrong :)
 }
 
@@ -82,17 +82,19 @@ getRawStory()
     let inputWord;
     let copiedWord;
     const normalWord = document.createElement("span");
-//extracting the words from the array of obj:
+    //extracting the words from the array of obj:
     processedStory.forEach((element, i) => {
       if ("pos" in element) {
         inputWord = document.createElement("input");
         inputWord.classList.add("toEdit");
         inputWord.setAttribute("id", `input${i}`);
+        inputWord.setAttribute("maxlength", "20");
         //inputWord.setAttribute('oninput',detectInput())
         //console.log(inputWord.id)
         copiedWord = document.createElement("span");
         copiedWord.classList.add("blank");
         copiedWord.setAttribute("id", `copy${i}`);
+
         //console.log(copiedWord.id)
         edit.append(inputWord.cloneNode(true));
         privew.append(copiedWord.cloneNode(true));
@@ -103,10 +105,11 @@ getRawStory()
       }
     });
 
-//connecting the madLibsEdit eith madLibsPreview
+    //connecting the madLibsEdit eith madLibsPreview
     const allInputs = document.getElementsByClassName("toEdit");
-    for (let i = 0; i < allInputs.length; i++) {//ask about iteration through allInputs
-     // console.log(allInputs[i]);
+    for (let i = 0; i < allInputs.length; i++) {
+      //ask about iteration through allInputs
+      // console.log(allInputs[i]);
 
       allInputs[i].addEventListener("input", detectInput);
       function detectInput() {
