@@ -1,3 +1,14 @@
 /**
  * Your CSS goes here.
  */
+ #madLibsEdit{
+    color: red;
+   
+ }
+ #madLibsPreview{
+    color: blue;
+ }
+ .blank{
+   padding-right: 1cm; 
+   border: 1px solid red;
+ }
