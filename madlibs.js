@@ -90,6 +90,7 @@ getRawStory()
         inputWord.classList.add("toEdit");
         inputWord.setAttribute("id", `input${numOfInput}`);
         inputWord.setAttribute("maxlength", "20");
+        inputWord.setAttribute('placeholder',element.pos)
 
         //inputWord.setAttribute('oninput',detectInput())
         //console.log(inputWord.id)
@@ -116,11 +117,11 @@ getRawStory()
 
       allInputs[i].addEventListener("input", detectInput);
       function detectInput() {
-        console.log("there is input");
+        //console.log("there is input");
         const allCopied = document.getElementsByClassName("blank");
 
         const myInputText = allInputs[i].value;
-        allCopied[i].textContent = myInputText;
+        allCopied[i].textContent =myInputText+' ';
         return;
       }
     }
@@ -130,8 +131,6 @@ getRawStory()
     
     for (let i = 0; i<allInputs.length-1; i++) {
         allInputs[i].addEventListener("keypress", (e) => {
-          console.log(i);
-
           if (e.key === "Enter") allInputs[i + 1].focus();
         });
     }
