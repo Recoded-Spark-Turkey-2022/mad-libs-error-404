@@ -81,23 +81,26 @@ getRawStory()
     madLibsPreview.append(privew);
     let inputWord;
     let copiedWord;
+    let numOfInput = 0;
     const normalWord = document.createElement("span");
     //extracting the words from the array of obj:
-    processedStory.forEach((element, i) => {
+    processedStory.forEach((element) => {
       if ("pos" in element) {
         inputWord = document.createElement("input");
         inputWord.classList.add("toEdit");
-        inputWord.setAttribute("id", `input${i}`);
+        inputWord.setAttribute("id", `input${numOfInput}`);
         inputWord.setAttribute("maxlength", "20");
+
         //inputWord.setAttribute('oninput',detectInput())
         //console.log(inputWord.id)
         copiedWord = document.createElement("span");
         copiedWord.classList.add("blank");
-        copiedWord.setAttribute("id", `copy${i}`);
+        copiedWord.setAttribute("id", `copy${numOfInput}`);
 
         //console.log(copiedWord.id)
         edit.append(inputWord.cloneNode(true));
         privew.append(copiedWord.cloneNode(true));
+        numOfInput += 1;
       } else {
         normalWord.textContent = `${element.word} `;
         edit.append(normalWord.cloneNode(true));
@@ -121,4 +124,16 @@ getRawStory()
         return;
       }
     }
+    //use enter to loop through inputs :
+    const firstinput = document.getElementById("input0");
+    firstinput.focus();
+    
+    for (let i = 0; i<allInputs.length-1; i++) {
+        allInputs[i].addEventListener("keypress", (e) => {
+          console.log(i);
+
+          if (e.key === "Enter") allInputs[i + 1].focus();
+        });
+    }
+    
   });
