@@ -71,15 +71,29 @@ getRawStory()
   .then(parseStory)
   .then((processedStory) => {
     console.log(processedStory);
-    const madLibsEdit = document.getElementsByClassName("madLibsEdit");
-    const madLibsPreview = document.getElementsByClassName("madLibsPreview");
+    const madLibsEdit = document.getElementById("madLibsEdit");
+    const madLibsPreview = document.getElementById("madLibsPreview");
+    //console.log(madLibsEdit)
+    const edit = document.createElement("p");
+    const privew = document.createElement("p");
+
+    madLibsEdit.append(edit);
+    madLibsPreview.append(privew)
+
     processedStory.forEach((element) => {
       if ("pos" in element) {
+        const span = document.createElement("span");
+        span.textContent = `----(${element.pos}) `;
+        edit.append(span.cloneNode(true));
+        privew.append(span)
       } else {
-        const p = document.createElement("p");
-        p.textContent = element.word;
-        madLibsEdit.append(p); //madLibsEdit.append is not a function
+        const span = document.createElement("span");
+        span.textContent = `${element.word} `;
+        edit.append(span.cloneNode(true));
+        privew.append(span)
       }
     });
+    
+    
   });
-//undefined
+
