@@ -2,13 +2,36 @@
  * Your CSS goes here.
  */
  #madLibsEdit{
-    color: red;
-   
+    color: black;
+    border: 3px solid black;
+    width: auto;
+  padding: 100px;
+  margin: px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: space-between;
  }
  #madLibsPreview{
-    color: blue;
+    color: black;
+    width: 50%;
+    width: auto;
+  padding: 100px;
+  margin: 100px;
+    border: 2px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
  }
  .blank{
    padding-right: 1cm; 
-   border: 1px solid red;
+   border: 1px solid black;
+ }
+
+ body{
+   background-image: url("images/cartoon.webp");
+   background-size: cover;
+   height: 500px; 
  }
