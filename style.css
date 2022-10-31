@@ -3,6 +3,10 @@ body{
    background-size: cover;
    height: 500px; 
  }
+header{
+   background-color: #f8ce6b !important;
+}
+
 #iron{
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
 }
@@ -32,7 +36,15 @@ text-align: center;
 
  #madLibsEdit input{
    background-color: #ff000029;
+   color: white;
  }
 
-
- 
+.card{
+   background-color: #0f1010 !important;
+   opacity: 80%;
+   color: cornsilk;
+   
+}
+audio{
+   display: none;
+}
