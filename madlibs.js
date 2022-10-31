@@ -49,7 +49,7 @@ function parseStory(rawStory) {
       let obj = {};
       let x = /\w+/g;
       obj.word = arrayOfWord[i].match(x)[0];
-      obj.pos = "adve";
+      obj.pos = "adjective";
       objarray.push(obj);
     } else {
       let obj = {};

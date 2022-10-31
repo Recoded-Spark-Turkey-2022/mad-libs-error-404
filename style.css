@@ -1,48 +1,19 @@
-/**
- * Your CSS goes here.
- */
- #madLibsEdit{
-    color: black;
-    border: 3px solid black;
-    width: auto;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-   justify-content: space-between;
- }
- #madLibsPreview{
-    color: black;
-    border: 2px solid black;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-
- }
-
-
 
  body{
    background-image: url("images/background.jpeg");
    background-size: cover;
    height: 500px; 
  }
-/*.img-fluid{
-   width: 8%;
-}*/
+
  input.toEdit{
   margin: 0.1rem;
 width: 6rem;
 font-size: 1rem;
 text-align: center;
  }
- .blank{
+ .card{
+  background: blue;
+ }
+ 
 
-  margin-inline: 1em;
-
-}
-p{
-  font-size: 1.5rem;
-  background-color:rgba(255, 0, 0, 0.467)
-}
 
