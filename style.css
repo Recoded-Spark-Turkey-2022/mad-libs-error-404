@@ -1,9 +1,11 @@
-
- body{
+body{
    background-image: url("images/background.jpeg");
    background-size: cover;
    height: 500px; 
  }
+#iron{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
 
  input.toEdit{
   margin: 0.1rem;
@@ -11,9 +13,26 @@ width: 6rem;
 font-size: 1rem;
 text-align: center;
  }
- .card{
-  background: blue;
+ .blank{
+   color: #ff0000ba;
  }
+
+ .img-fluid{
+   padding-left: 15%;
+ }
+
+  #madLibsPreview{
+   line-height: 250% !important
+ }
+
+ #project{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+   padding-left: 50%;
+ }
+
+ #madLibsEdit input{
+   background-color: #ff000029;
+ }
+
+
  
-
-

@@ -6,6 +6,9 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
+    <!--fonts-->
+   
+
     <!-- CSS only bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -18,30 +21,30 @@
     <!--Header-->
 
 
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-warning">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-warning opacity-75">
       <!--<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="images/ironman.png"></use></svg>
       </a>-->
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-    <img src="images/ironman.png" class="img-fluid bi me-2" width="75" height="32" alt="Responsive image">
+    <img src="images/ironman.png" class="img-fluid bi me-2" width="175" height="32" alt="Responsive image">
     </a> 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary display-1">Story of ironman</a></li>
+        <li id="iron" class="display-1">Story of ironman</li>
       </ul>
 
       <div class="col-md-3 text-end">
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Mad libs</a></li>
+          <li id="project" class="display-7">Mad libs Project</li>
         </ul>
       </div>
     </header>
       <!--main-->
-      <div class="row">
+      <div class="row opacity-75">
         <div class="col-sm-6">
           <div class="card h-100">
-            <div class="card-body ">
+            <div class="card-body">
               <h5 class="card-title">Create your own story</h5>
-              <p class="card-text"> <b>Instructions:</b> fill in the blanks with nouns,verbs,adjectives to copmplete the story .</p>
+              <p class="card-text "> <b>Instructions:</b> fill in the blanks with nouns,verbs,adjectives to copmplete the story .</p>
               <div id='madLibsEdit' class="h6"></div>
               
             </div>
