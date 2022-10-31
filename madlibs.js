@@ -97,6 +97,7 @@ getRawStory()
         copiedWord = document.createElement("span");
         copiedWord.classList.add("blank");
         copiedWord.setAttribute("id", `copy${numOfInput}`);
+        copiedWord.innerHTML = `(${element.pos})`;   //to show the if it noun or verb etx in preivew box
 
         //console.log(copiedWord.id)
         edit.append(inputWord.cloneNode(true));
