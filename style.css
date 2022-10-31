@@ -7,40 +7,30 @@ header {
    display: block;
 }
 
-body{
-   background-image: url("images/cartoon.webp");
-   background-size: contain;
-  
+
+ .background-image{
+   background-image: url("images/cartoon.webp"); 
+   background-size: auto 100%;
+   background-repeat: no-repeat;
+ }
+
+ .container{
+   padding: 9.5%;
  }
 
  footer{
    display: block;
    align-content: center;
+   padding: 0%;
  }
 
  #madLibsEdit{
     color: black;
     border: 3px solid black;
-    width: auto;
-  padding: 100px;
-  margin: px;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-   justify-content: space-between;
  }
  #madLibsPreview{
     color: black;
-    width: 50%;
-    width: auto;
-    padding: 100px;
-    margin: 100px;
     border: 2px solid black;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-
  }
  .blank{
    padding-right: 1cm; 
@@ -52,4 +42,7 @@ body{
     font-size: 2.25rem;
  }
 
- 
+
+ #two-boxes{
+   width: 800px;
+ }
