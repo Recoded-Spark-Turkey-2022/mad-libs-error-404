@@ -1,1 +1,13 @@
-A billionaire[a] industrialist[a] and genius[a] inventor, Tony[n] , is conducting[v] weapons tests overseas, but terrorists[n] kidnap[v] him to force him to build[v] a devastating[a] weapon. Instead, he[n] and his fellow captive Yinser[n] build[v] an armored suit called MachI[n] and upend[v] his captors. Yinser[n] sacrifices[v] himself for returning tony[n] to America[n] . Stark[n] called a press conference and announced will no longer produce[v] weapons. He[n] got pushback from stane[n] . Secretly Stark[n] refines[v] the suit called MachII[n] and uses[v] it to combat[v] crime and terrorism. Stane[n] knows[v] about the suit and builds[v] one to beat[v] Stark[n] but he can’t without reactor power. Stane[n] steals[v] it from Stark[n] and leaves[v] him to die[v] . But Tony[n] manages[v] to recover[v] an old reactor and flies[v] for a final[a] confrontation which ends by destroying stane[n] . After a magnificent[v] fight, Stark[n] made[v] a press conference announce[v] that he is IronMan[n] .
+A billionaire[a] industrialist and genius inventor, Tony , 
+is conducting[v] weapons tests overseas, but terrorists[n] kidnap him 
+to force him to build a devastating[a] weapon. 
+Instead, he and his fellow captive Yinser build an armored suit[n] called MachI and upend his captors. 
+Yinser[n] sacrifices himself for returning tony[n] to America[n] . 
+Stark called a press conference[n] and announced will no longer produce weapons[n] . 
+He got pushback from stane . 
+Secretly Stark refines[v] the suit called MachII and uses it to combat[v] crime and terrorism. 
+Stane knows about the suit and builds[v] one to beat[v] Stark but he can’t without reactor power[n] . 
+Stane steals[v] it from Stark and leaves him to die[v] . 
+But Tony[n] manages to recover[v] an old reactor and flies for a final confrontation[n] 
+which ends by destroying Stane[n] . 
+After a magnificent[a] fight, Stark made a press conference, announce[v] that he is IronMan[n] .
