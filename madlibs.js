@@ -96,6 +96,7 @@ getRawStory()
         if (e.key === "Enter") allInputs[i + 1].focus();
       });
     }
-    //play the sound
-    document.getElementById("myAudio").play();
+    let sound=document.getElementById("myAudio");
+    sound.volume = 0.15;
+  
   });
