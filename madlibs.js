@@ -1,35 +1,5 @@
-/**
- * Complete the implementation of parseStory.
- *
- * parseStory retrieves the story as a single string from story.txt
- * (I have written this part for you).
- *
- * In your code, you are required (please read this carefully):
- * - to return a list of objects
- * - each object should definitely have a field, `word`
- * - each object should maybe have a field, `pos` (part of speech)
- *
- * So for example, the return value of this for the example story.txt
- * will be an object that looks like so (note the comma! periods should
- * be handled in the same way).
- *
- * Input: "Louis[n] went[v] to the store[n], and it was fun[a]."
- * Output: [
- *  { word: "Louis", pos: "noun" },
- *  { word: "went", pos: "verb", },
- *  { word: "to", },
- *  { word: "the", },
- *  { word: "store", pos: "noun" }
- *  { word: "," }
- *  ....
- *
- * There are multiple ways to do this, but you may want to use regular expressions.
- * Please go through this lesson: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/
- */
 let objarray = [];
 function parseStory(rawStory) {
-  // Your code here.
-
   let arrayOfWord = rawStory.split(" ");
 
   for (let i = 0; i < arrayOfWord.length; i++) {
@@ -57,22 +27,13 @@ function parseStory(rawStory) {
       objarray.push(obj);
     }
   }
-  // need to edit for showing dots and commas
-  return objarray; // This line is currently wrong :)
+  return objarray;
 }
 
-/**
- * All your other JavaScript code goes here, inside the function. Don't worry about
- * the `then` and `async` syntax for now.
- *
- * You'll want to use the results of parseStory() to display the story on the page.
- */
-function editStory(story) {}
-
+//diplay the story
 getRawStory()
   .then(parseStory)
   .then((processedStory) => {
-    //console.log(processedStory);
     const madLibsEdit = document.getElementById("madLibsEdit");
     const madLibsPreview = document.getElementById("madLibsPreview");
     const edit = document.createElement("p");
@@ -90,14 +51,14 @@ getRawStory()
         inputWord.classList.add("toEdit");
         inputWord.setAttribute("id", `input${numOfInput}`);
         inputWord.setAttribute("maxlength", "20");
-        inputWord.setAttribute('placeholder',element.pos)
+        inputWord.setAttribute("placeholder", element.pos);
 
         //inputWord.setAttribute('oninput',detectInput())
         //console.log(inputWord.id)
         copiedWord = document.createElement("span");
         copiedWord.classList.add("blank");
         copiedWord.setAttribute("id", `copy${numOfInput}`);
-        copiedWord.innerHTML = `(${element.pos})`; 
+        copiedWord.innerHTML = `(${element.pos})`;
 
         //console.log(copiedWord.id)
         edit.append(inputWord.cloneNode(true));
@@ -122,21 +83,19 @@ getRawStory()
         const allCopied = document.getElementsByClassName("blank");
 
         const myInputText = allInputs[i].value;
-        allCopied[i].textContent =myInputText+' ';
+        allCopied[i].textContent = myInputText + " ";
         return;
       }
     }
     //use enter to loop through inputs :
     const firstinput = document.getElementById("input0");
     firstinput.focus();
-    
-    for (let i = 0; i<allInputs.length-1; i++) {
-        allInputs[i].addEventListener("keypress", (e) => {
-          if (e.key === "Enter") allInputs[i + 1].focus();
-        });
-    }
-    
-  });
 
-  
-  
+    for (let i = 0; i < allInputs.length - 1; i++) {
+      allInputs[i].addEventListener("keypress", (e) => {
+        if (e.key === "Enter") allInputs[i + 1].focus();
+      });
+    }
+    //play the sound
+    document.getElementById("myAudio").play();
+  });

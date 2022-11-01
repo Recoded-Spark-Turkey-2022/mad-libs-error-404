@@ -20,12 +20,10 @@
   <body>
     <!--Header-->
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom opacity-75">
-      <!--<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="images/ironman.png"></use></svg>
-      </a>-->
+  
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-    <img src="images/iron.jpeg" class="img-fluid bi me-2" width="225" height="32" alt="Responsive image">
-    </a> 
+        <img src="images/iron.jpeg" class="img-fluid bi me-2" width="225" height="32" alt="Responsive image">
+      </a> 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li id="iron" class="display-1">Story of ironman</li>
       </ul>
@@ -42,7 +40,8 @@
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Create your own story</h5>
-              <p class="card-text "> <b>Instructions:</b> fill in the blanks with nouns,verbs,adjectives to copmplete the story .</p>
+              <p class="card-text "> <b>Instructions:</b> fill in the blanks with nouns,verbs,adjectives to copmplete the story.</p>
+              <br>
               <div id='madLibsEdit' class="h6"></div>
               
             </div>
@@ -52,7 +51,7 @@
           <div class="card h-100 ">
             <div class="card-body">
               <h5 class="card-title">Your story results</h5>
-              
+              <p class="card-text "><br></p>
               <div id='madLibsPreview' class="h6" ></div>
               
             </div>
@@ -70,19 +69,21 @@
           <span class="mb-3 mb-md-0 text-muted">© 2022|by Error-404 team</span>
         </div>
         <ul class="nav col-md-5 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-muted" href="https://github.com/batoulst?tab=following">Batoul</a></li>
+          <li class="ms-3"><a class="text-muted" href="https://github.com/batoulst">Batoul</a></li>
           <li class="ms-3"><a class="text-muted" href="https://github.com/Muhammed98Mustafa">Mustafa</a></li>
           <li class="ms-3"><a class="text-muted" href="https://github.com/Saeed-Alsaiyed">Saeed</a></li>
           <li class="ms-3"><a class="text-muted" href="#">Yousuf</a></li>
         </ul>
       </footer>
-      <audio controls autoplay>
-        <source src="ironman.ogg" type="audio/ogg">
-        <source src="ironman.mp3" type="audio/mpeg">
+      <audio id="myAudio" controls autoplay>  
+        <source src="/sounds/ironman.ogg" type="audio/ogg">
+        <source src="sounds/ironman.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
     <script src="do-not-touch.js"></script>
     <script src="madlibs.js"></script>
+   
+      
   </body>
 </html>
