@@ -1,1 +1,13 @@
-Louis[n] went[v] to the store[n], and it was fun[a]. He taught[v] the class[n].
+A billionaire[a] industrialist and genius inventor, Tony[n] , 
+is conducting[v] weapons tests overseas, but terrorists[n] kidnap him 
+to force him to build a devastating[a] weapon. 
+Instead, he and his fellow captive Yinser[n] build an armored suit called MachI[n] and upend his captors. 
+Yinser[n] sacrifices himself for returning tony[n] to America[n] . 
+Stark[n] called a press conference and announced will no longer produce[n] weapons. 
+He got pushback from stane . 
+Secretly Stark refines[v] the suit called MachII[n] and uses it to combat[v] crime and terrorism. 
+Stane[n] knows about the suit and builds[v] one to beat[v] Stark but he can’t without reactor power[n] . 
+Stane steals[v] it from Stark[n] and leaves him to die[v] . 
+But Tony[n] manages to recover[v] an old reactor and flies for a final confrontation 
+which ends by destroying Stane[n] . 
+After a magnificent[a] fight, Stark[n] made a press conference, announce that he is IronMan[n] .
